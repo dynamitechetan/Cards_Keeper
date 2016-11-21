@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "298293923639",
+    "project_id": "smartcards-30bfe"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298293923639:android:328beaed027fe474",
+        "android_client_info": {
+          "package_name": "com.rahulm09.android.smartcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298293923639-ioeu8n4d3uc6cl1r9ldor9l73nj9gn77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahulm09.android.smartcards",
+            "certificate_hash": "4CB2FB8B123B0C8FAC08F5C836E3F15FC8568121"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMtHw2HgutoJORdFb6IAwlLcPHq23bKuw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

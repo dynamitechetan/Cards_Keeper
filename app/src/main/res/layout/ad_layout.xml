@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.AdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    ads:adSize="SMART_BANNER"
+    ads:adUnitId="@string/banner_ad_unit_id"
+    tools:showIn="@layout/fragment_main"></com.google.android.gms.ads.AdView>

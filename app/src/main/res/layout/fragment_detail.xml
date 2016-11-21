@@ -1,0 +1,36 @@
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_detail"
+    tools:context="com.dynamitechetan.android.CardKeeper.DetailActivityFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:nestedScrollingEnabled="true"
+    android:fitsSystemWindows="true">
+    <TextView
+        android:id="@+id/card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
+    <ImageView
+        android:id="@+id/card_barcode"
+        android:layout_width="400dp"
+        android:layout_height="200dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_number"
+        android:textSize="25sp"/>
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+

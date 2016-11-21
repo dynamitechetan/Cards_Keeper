@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dynamitechetan.android.CardKeeper">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.dynamitechetan.android.CardKeeper.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+        android:name="com.dynamitechetan.android.CardKeeper.AddCard"
+        android:label="@string/add_card_label"
+        android:parentActivityName="com.dynamitechetan.android.CardKeeper.MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.dynamitechetan.android.CardKeeper.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.dynamitechetan.android.CardKeeper.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.dynamitechetan.android.CardKeeper.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dynamitechetan.android.CardKeeper.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.dynamitechetan.android.CardKeeper.EditCard"
+            android:label="@string/edit_card_label"
+            android:parentActivityName="com.dynamitechetan.android.CardKeeper.DetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dynamitechetan.android.CardKeeper.DetailActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.dynamitechetan.android.CardKeeper.data.generated.CardProvider"
+            android:authorities="com.dynamitechetan.android.CardKeeper.data.CardProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.dynamitechetan.android.CardKeeper.widget.CardWidgetProvider"
+            android:label="@string/widget_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info"/>
+        </receiver>
+
+        <service
+            android:name="com.dynamitechetan.android.CardKeeper.widget.AppWidgetRemoteViewsService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+    </application>
+
+</manifest>
