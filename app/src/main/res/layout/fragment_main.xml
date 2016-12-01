@@ -29,6 +29,14 @@
         android:paddingBottom="5dp">
     </GridView>
     </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/no_card_found"
+        android:id="@+id/nocardfound"
+        android:visibility="gone"
+        android:padding="30dp"
+        android:src="@drawable/nocardfound"/>
 
 </RelativeLayout>
 

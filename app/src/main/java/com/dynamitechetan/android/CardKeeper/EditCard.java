@@ -34,7 +34,6 @@ public class EditCard extends AppCompatActivity {
     EditText editAddress;
     Button Photo;
     TextView PhotoPathTv;
-
     Uri selectedImageURI;
     @Override
 
@@ -42,17 +41,17 @@ public class EditCard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_card);
 
-            Bundle extras = getIntent().getExtras();
-            myCard = extras.getParcelable(CARD_KEY);
+        Bundle extras = getIntent().getExtras();
+        myCard = extras.getParcelable(CARD_KEY);
 
-            editName = (EditText) findViewById(R.id.editNameText);
-            editNumber = (EditText) findViewById(R.id.editNumberText);
+        editName = (EditText) findViewById(R.id.editNameText);
+        editNumber = (EditText) findViewById(R.id.editNumberText);
         editEmail = (EditText) findViewById(R.id.editEmail);
         editWebsite = (EditText) findViewById(R.id.editWebsiteText);
         editAddress = (EditText) findViewById(R.id.editAddressText);
 
-            editName.setText(myCard.name);
-            editNumber.setText(myCard.number);
+        editName.setText(myCard.name);
+        editNumber.setText(myCard.number);
         editEmail.setText(myCard.email);
         editAddress.setText(myCard.address);
         editWebsite.setText(myCard.website);

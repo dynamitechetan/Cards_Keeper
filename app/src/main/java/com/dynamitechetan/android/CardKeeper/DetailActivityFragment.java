@@ -24,6 +24,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.util.List;
 
+import static com.dynamitechetan.android.CardKeeper.R.id.mapView;
+
 
 public class DetailActivityFragment extends Fragment implements OnMapReadyCallback {
     private static final String CARD_KEY = "card" ;
@@ -45,6 +47,16 @@ public class DetailActivityFragment extends Fragment implements OnMapReadyCallba
         }
 
 
+        MapsInitializer.initialize(this.getActivity());
+        mMapView = (MapView) rootView.findViewById(mapView);
+        mMapView.onCreate(savedInstanceState);
+        mMapView.getMapAsync(this);
+
+//        http://stackoverflow.com/questions/32908988/android-map-loading-very-slow-not-loading-at-all-in-started-activity-until-click
+        mMapView.onResume();
+        mMapView.onEnterAmbient(null);
+
+
         ImageView photo = (ImageView) rootView.findViewById(R.id.ivProfilePic);
         Glide.with(getContext()).load(myCard.photo).into(photo);
 
@@ -64,11 +76,6 @@ public class DetailActivityFragment extends Fragment implements OnMapReadyCallba
         cardAddress.setText(myCard.address);
 
 
-
-        MapsInitializer.initialize(this.getActivity());
-        mMapView = (MapView) rootView.findViewById(R.id.mapView);
-        mMapView.onCreate(savedInstanceState);
-        mMapView.getMapAsync(this);
 
         return rootView;
     }
@@ -100,6 +107,9 @@ public class DetailActivityFragment extends Fragment implements OnMapReadyCallba
 
     }
 
+
+
+
     @Override
     public void onResume() {
         mMapView.onResume();
@@ -108,8 +118,21 @@ public class DetailActivityFragment extends Fragment implements OnMapReadyCallba
 
     @Override
     public void onPause() {
+        mMapView.onPause();
         adres = null;
 
         super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        mMapView.onLowMemory();
+        super.onLowMemory();
     }
 }

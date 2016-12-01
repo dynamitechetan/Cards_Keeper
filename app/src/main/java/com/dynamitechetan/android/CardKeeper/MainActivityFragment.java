@@ -15,11 +15,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import com.dynamitechetan.android.CardKeeper.data.CardColumns;
 import com.dynamitechetan.android.CardKeeper.data.CardProvider;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.maps.MapsInitializer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
     AdRequest adRequest;
     AdView mAdView;
     View rootView;
+    ImageView nocardfound;
     public static final String APPWIDGET_UPDATE= "android.appwidget.action.APPWIDGET_UPDATE";
 
     public MainActivityFragment() {
@@ -54,7 +57,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
+        nocardfound = (ImageView) rootView.findViewById(R.id.nocardfound);
         mAdView = (AdView) rootView.findViewById(R.id.adView);
 
         GridView gridView = (GridView) rootView.findViewById(R.id.grid_view);
@@ -67,6 +70,9 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
                 startActivity(detailIntent);
             }
         });
+
+        MapsInitializer.initialize(this.getActivity());
+
         return rootView;
     }
 
@@ -85,7 +91,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         if (cursor != null && cursor.getCount() > 0) {
             cards = new ArrayList<>(cursor.getCount());
             Log.d("Cursor", String.valueOf(cursor.getCount()));
-
+            nocardfound.setVisibility(View.GONE);
             while (cursor.moveToNext()) {
                 Card card = new Card(cursor.getInt(cursor.getColumnIndex(CardColumns._ID)),
                         cursor.getString(cursor.getColumnIndex(CardColumns.NAME)),
@@ -101,6 +107,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
             updateAdapter(cards);
         }else{
             showMessage(getString(R.string.no_cards_message));
+            nocardfound.setVisibility(View.VISIBLE);
         }
     }
 
