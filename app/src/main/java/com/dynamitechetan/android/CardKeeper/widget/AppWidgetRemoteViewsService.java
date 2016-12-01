@@ -11,16 +11,15 @@ import com.dynamitechetan.android.CardKeeper.R;
 import com.dynamitechetan.android.CardKeeper.data.CardColumns;
 import com.dynamitechetan.android.CardKeeper.data.CardProvider;
 
-/**
- * Created by rmenezes on 5/6/2016.
- */
+
 public class AppWidgetRemoteViewsService extends RemoteViewsService {
     private static final int INDEX_QUOTE_ID = 0;
-    public final String LOG_TAG = AppWidgetRemoteViewsService.class.getSimpleName();
     private static final String[] CARD_COLUMNS = {
             CardColumns._ID,
             CardColumns.NAME,
     };
+    public final String LOG_TAG = AppWidgetRemoteViewsService.class.getSimpleName();
+
     @Override
     public RemoteViewsFactory onGetViewFactory(Intent intent) {
         return new RemoteViewsFactory() {

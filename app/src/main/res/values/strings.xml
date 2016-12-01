@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Cards Keeper</string>
-    <string name="action_settings" translatable="false">Settings</string>
     <string name="title_activity_detail" translatable="false">Card Detail</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="action_add" translatable="false">Add Card</string>
@@ -14,6 +13,7 @@
     <string name="action_edit" translatable="false">Edit</string>
     <string name="widget_title" translatable="false">Saved Cards</string>
     <string name="card_add_message">Success</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDLK6_SGhwyNS-3s4dZSN6ClLIQTy65EzQ</string>
 
     <string name="delete_dialogbox_title">Confirm Delete...</string>
     <string name="delete_dialogbox_message">Are you sure you want delete this card?</string>
@@ -24,10 +24,8 @@
     <string name="form_name">Name:</string>
     <string name="form_number">Number:</string>
     <string name="cd_delete_card">Delete card</string>
-    <string name="test_string">TEST</string>
     <string name="add_card_label">Add Card</string>
     <string name="edit_card_label">Edit Card</string>
-    <string name="add_test_card">Add Test Card</string>
     <string name="share_app_cancel_message">Share App Cancelled</string>
     <string name="no_cards_message">No Cards</string>
     <string name="card_saved_message">Saved</string>
@@ -38,5 +36,10 @@
     <string name="wesbite">Wesbite</string>
     <string name="address">Address</string>
     <string name="photo">Photo</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="please_select_a_photo">Please Select a Photo</string>
+    <string name="phone">Phone</string>
+    <string name="website">Website</string>
+    <string name="email_img">Email</string>
 
 </resources>

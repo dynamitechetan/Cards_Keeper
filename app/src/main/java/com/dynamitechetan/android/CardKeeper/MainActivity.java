@@ -3,7 +3,6 @@ package com.dynamitechetan.android.CardKeeper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -56,8 +55,4 @@ private static final String CONTENT = "content";
     }
 
 
-    private void showMessage(String msg) {
-        Snackbar snackbar = Snackbar.make(co, msg, Snackbar.LENGTH_SHORT);
-        snackbar.show();
-    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/add_card">
 
     <LinearLayout
@@ -8,24 +8,24 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/nameText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="@string/form_name"
-            android:id="@+id/nameText" />
+            android:text="@string/form_name" />
 
         <EditText
+            android:id="@+id/editNameText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-            android:inputType="textCapWords"
-            android:id="@+id/editNameText" />
+            android:inputType="textCapWords" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/line2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line2">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="0dp"
@@ -35,16 +35,16 @@
            />
 
         <EditText
+            android:id="@+id/editNumberText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-
-            android:id="@+id/editNumberText" />
+            android:inputType="number" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/line3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line3">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="0dp"
@@ -54,66 +54,69 @@
              />
 
         <EditText
+            android:id="@+id/editEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-
-            android:id="@+id/editEmail" />
+            android:inputType="textEmailAddress" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/line4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line4">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/WebsiteText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="@string/wesbite"
-            android:id="@+id/WebsiteText" />
+            android:text="@string/wesbite" />
 
         <EditText
+            android:id="@+id/editWebsiteText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-
-            android:id="@+id/editWebsiteText" />
+            android:inputType="textWebEditText" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/line5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line5">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/addressText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="@string/address"
-            android:id="@+id/addressText" />
+            android:text="@string/address" />
 
         <EditText
+            android:id="@+id/editAddressText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-            android:lines="3"
-            android:id="@+id/editAddressText" />
+            android:inputType="textPostalAddress"
+            android:lines="3" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/line6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line6">
+        android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/Photo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:text="@string/photo"
-            android:id="@+id/Photo" />
+            android:text="@string/photo" />
 
         <TextView
+            android:id="@+id/photoTv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
-            android:id="@+id/photoTv" />
+            android:gravity="center"
+            android:text="@string/please_select_a_photo" />
     </LinearLayout>
 </merge>

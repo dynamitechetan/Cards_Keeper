@@ -18,36 +18,39 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
+            resValue 'string', 'maps_v2_api_key', '"AIzaSyDtjG_DoFbcI111c2ZiwHncSvnk285c68M"'
         }
         debug {
             signingConfig signingConfigs.config
+            resValue 'string', 'maps_v2_api_key', '"AIzaSyDLK6_SGhwyNS-3s4dZSN6ClLIQTy65EzQ"'
         }
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
 
     //Schematic
-    apt 'net.simonvt.schematic:schematic-compiler:0.6.3'
-    compile 'net.simonvt.schematic:schematic:0.6.3'
-    compile 'com.android.support:cardview-v7:23.0.+'
-    compile 'com.android.support:recyclerview-v7:23.0.+'
     //Google services
-    compile 'com.google.android.gms:play-services:8.4.0'
     //Others
-    compile 'com.github.developer-shivam:crescento:1.0.0'
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'net.simonvt.schematic:schematic:0.6.3'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.google.android.gms:play-services:9.4.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.github.jkwiecien:EasyImage:1.2.3'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-
+    testCompile 'junit:junit:4.12'
+    apt 'net.simonvt.schematic:schematic-compiler:0.6.3'
 }

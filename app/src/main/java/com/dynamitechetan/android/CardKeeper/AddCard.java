@@ -93,6 +93,7 @@ public class AddCard extends AppCompatActivity{
             @Override
             public void onImagePicked(final File imageFile, EasyImage.ImageSource source, int type) {
                  selectedImageURI = data.getData();
+                PhotoPathTv.setText(selectedImageURI.toString());
             }
 
             @Override
@@ -118,14 +119,17 @@ public class AddCard extends AppCompatActivity{
         String emailText = editEmail.getText().toString();
         String websiteText = editWebsite.getText().toString();
         String addressText = editAddress.getText().toString();
-        if ((nameText != null && !nameText.isEmpty()) && (numberText != null && !numberText.isEmpty())){
+        if ((nameText != "" && !nameText.isEmpty()) && (numberText != "" && !numberText.isEmpty())
+                && (emailText != "" && !emailText.isEmpty()) && (websiteText != "" && !websiteText.isEmpty())
+                && (addressText != "" && !addressText.isEmpty()) && (selectedImageURI != null && !selectedImageURI.toString().isEmpty())
+                ) {
 
             ContentValues cv = new ContentValues();
             cv.put(CardColumns.NAME, nameText);
             cv.put(CardColumns.NUMBER, numberText);
             cv.put(CardColumns.PHOTO, selectedImageURI.toString());
             cv.put(CardColumns.EMAIL, emailText);
-            cv.put(CardColumns.WEBSITE, websiteText);
+            cv.put(CardColumns.WEBSITE, "http://" + websiteText);
             cv.put(CardColumns.ADDRESS, addressText);
 
             getBaseContext().getContentResolver().insert(CardProvider.Cards.CONTENT_URI, cv);

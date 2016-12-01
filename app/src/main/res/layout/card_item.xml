@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
-    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="3dp"
     card_view:cardElevation="4dp"
-    card_view:cardCornerRadius="3dp">
+    card_view:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,41 +25,86 @@
                 android:id="@+id/ivProfilePic"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_gravity="center"
+
                 android:padding="5dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/card_number"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="5sp"
-                    android:paddingTop="5dp"
-                    android:text="Shivam"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+
+                        android:paddingEnd="5dp"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/phone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/phone"
+                        android:src="@drawable/ic_phone_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/email"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/email_img"
+                        android:src="@drawable/ic_email_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/website"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/website"
+
+                        android:src="@drawable/ic_language_black_24dp" />
+                </LinearLayout>
+
 
                 <TextView
                     android:id="@+id/card_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:textColor="#0D98FE"
+                    android:paddingEnd="5dp"
                     android:paddingLeft="5dp"
-                    android:text="Developer"
+                    android:paddingStart="5dp"
+                    android:textColor="#0D98FE"
+
                     android:textSize="25sp" />
                 <TextView
                     android:id="@+id/work"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
                     android:paddingLeft="5sp"
+                    android:paddingStart="5dp"
                     android:paddingTop="5dp"
-                    android:text="Music Producer"
                     android:textColor="#000"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -69,54 +114,3 @@
             android:layout_height="8dp"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--xmlns:cardflip="http://schemas.android.com/apk/res-auto">-->
-
-
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
-    <!--android:layout_height="100dp"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_margin="4dp"-->
-    <!--card_view:cardCornerRadius="4dp"-->
-    <!--card_view:contentPadding="5dp"-->
-    <!--card_view:cardBackgroundColor="#CFD8DC"-->
-    <!--android:id="@+id/cv">-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:gravity="center"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/card_name"-->
-    <!--android:gravity="center"-->
-    <!--android:textAllCaps="true"-->
-    <!--android:textSize="20sp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:gravity="center"-->
-    <!--android:id="@+id/card_number" />-->
-
-    <!--<Button-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="mite"-->
-    <!--android:id="@+id/but"/>-->
-    <!--</LinearLayout>-->
-
-
-    <!--</android.support.v7.widget.CardView>-->
-
-
-    <!--</LinearLayout>-->
