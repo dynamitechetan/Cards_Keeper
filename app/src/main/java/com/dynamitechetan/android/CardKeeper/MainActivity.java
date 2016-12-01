@@ -13,11 +13,7 @@ import com.google.android.gms.appinvite.AppInviteInvitation;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String CONTENT = "content";
-    private static final String FORMAT = "format";
-    private static final String TAG = MainActivity.class.getSimpleName();
     private static final int REQUEST_INVITE = 0;
-    private static final int SCAN_CARD = 49374;
     private CoordinatorLayout co;
 
     @Override

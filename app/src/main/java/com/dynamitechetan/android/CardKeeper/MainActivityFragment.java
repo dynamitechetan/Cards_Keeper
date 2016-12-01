@@ -14,8 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.dynamitechetan.android.CardKeeper.data.CardColumns;
 import com.dynamitechetan.android.CardKeeper.data.CardProvider;
@@ -60,9 +60,9 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         nocardfound = (ImageView) rootView.findViewById(R.id.nocardfound);
         mAdView = (AdView) rootView.findViewById(R.id.adView);
 
-        GridView gridView = (GridView) rootView.findViewById(R.id.grid_view);
-        gridView.setAdapter(cardAdapter);
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ListView listView = (ListView) rootView.findViewById(R.id.list_view);
+        listView.setAdapter(cardAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent detailIntent = new Intent(getActivity(), DetailActivity.class);

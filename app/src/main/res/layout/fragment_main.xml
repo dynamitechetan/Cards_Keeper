@@ -22,12 +22,13 @@
         android:orientation="vertical"
         android:layout_alignParentTop="true"
         android:layout_above="@id/ad_layout" >
-    <GridView
-        android:id="@+id/grid_view"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
+        android:divider="@null"
         android:layout_height="match_parent"
         android:paddingBottom="5dp">
-    </GridView>
+    </ListView>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"

@@ -42,5 +42,6 @@
     <string name="website">Website</string>
     <string name="email_img">Email</string>
     <string name="no_card_found">No card Found</string>
+    <string name="select_a_photo">Select a Photo</string>
 
 </resources>

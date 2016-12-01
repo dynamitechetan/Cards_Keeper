@@ -14,10 +14,7 @@ import com.dynamitechetan.android.CardKeeper.data.CardProvider;
 
 public class AppWidgetRemoteViewsService extends RemoteViewsService {
     private static final int INDEX_QUOTE_ID = 0;
-    private static final String[] CARD_COLUMNS = {
-            CardColumns._ID,
-            CardColumns.NAME,
-    };
+
     public final String LOG_TAG = AppWidgetRemoteViewsService.class.getSimpleName();
 
     @Override

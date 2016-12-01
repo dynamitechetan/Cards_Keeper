@@ -63,10 +63,7 @@ public class EditCard extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
-
                 start();
-
             }
         });
 
@@ -149,6 +146,7 @@ public class EditCard extends AppCompatActivity {
         String emailText = editEmail.getText().toString();
         String websiteText = editWebsite.getText().toString();
         String addressText = editAddress.getText().toString();
+
         if ((nameText != "" && !nameText.isEmpty()) && (numberText != "" && !numberText.isEmpty())
                 && (emailText != "" && !emailText.isEmpty()) && (websiteText != "" && !websiteText.isEmpty())
                 && (addressText != "" && !addressText.isEmpty())
@@ -157,6 +155,10 @@ public class EditCard extends AppCompatActivity {
 
             cv.put(CardColumns.NAME, nameText);
             cv.put(CardColumns.NUMBER, numberText);
+            cv.put(CardColumns.PHOTO, PhotoPathTv.getText().toString());
+            cv.put(CardColumns.EMAIL, emailText);
+            cv.put(CardColumns.WEBSITE, websiteText);
+            cv.put(CardColumns.ADDRESS, addressText);
             getBaseContext().getContentResolver().update(CardProvider.Cards.withId(myCard.id),cv,null,null);
                 Toast.makeText(getBaseContext(), R.string.card_saved_message ,Toast.LENGTH_LONG).show();
                 Intent backToMain = new Intent(this, MainActivity.class);

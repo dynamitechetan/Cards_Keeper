@@ -108,6 +108,7 @@
             android:id="@+id/Photo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/select_a_photo"
             android:layout_weight="0.25"
             android:text="@string/photo" />
 
