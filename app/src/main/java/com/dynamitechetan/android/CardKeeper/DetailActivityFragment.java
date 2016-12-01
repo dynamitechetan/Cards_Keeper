@@ -64,6 +64,7 @@ public class DetailActivityFragment extends Fragment implements OnMapReadyCallba
         cardAddress.setText(myCard.address);
 
 
+
         MapsInitializer.initialize(this.getActivity());
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
