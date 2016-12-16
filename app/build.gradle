@@ -27,11 +27,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
-            resValue 'string', 'maps_v2_api_key', '"AIzaSyDtjG_DoFbcI111c2ZiwHncSvnk285c68M"'
+            resValue 'string', 'maps_v2_api_key', '"key here"'
         }
         debug {
             signingConfig signingConfigs.config
-            resValue 'string', 'maps_v2_api_key', '"AIzaSyDLK6_SGhwyNS-3s4dZSN6ClLIQTy65EzQ"'
+            resValue 'string', 'maps_v2_api_key', '"key here"'
         }
     }
 }
